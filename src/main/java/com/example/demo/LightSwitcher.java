@@ -6,6 +6,7 @@ class lightSwitcher {
     public int buttonsQuantity;
     public float amperes;
     public boolean remoteControl;
+    public int x;
 
     //Constructor of class lightSwitcher creation (4 parameters)
     public lightSwitcher(String color, int buttonsQuantity, float amperes, boolean remoteControl){
