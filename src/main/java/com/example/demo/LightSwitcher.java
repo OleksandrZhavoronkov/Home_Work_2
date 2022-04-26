@@ -9,11 +9,13 @@ class lightSwitcher {
     //Declared static fields for static methods
     public static float voltage;
     public static float resistance;
+    public static String address;
 
     //initializing variables for static methods (wanted to have there some digits)
     static {
          voltage = 220;
          resistance = 1200;
+         address = "1500 Pentagon Pedestrian Tunnel, Washington, VA 20310, United States";
     }
 
     //Static method creation for showing how much Voltage is
@@ -25,6 +27,11 @@ class lightSwitcher {
     public static float lightSwitcherCurrentPower () {
         //used formula here Voltage^2/Resistance
         return voltage*voltage/resistance;
+    }
+
+    //Static method creation for showing address
+    public static void addressShow() {
+        System.out.println("The Address is - " + address);
     }
 
     //Constructor of class lightSwitcher creation (4 parameters)
@@ -94,10 +101,12 @@ class lightSwitcher {
         System.out.println(bathroom);
         //Displaying an object with 1 parameter
         System.out.println(bedroom.toString("Red"));
-        //Using method lightSwitcherVoltageShow called from class lightSwitcher
+        //Using static method lightSwitcherVoltageShow called from class lightSwitcher
         lightSwitcher.lightSwitcherVoltageShow();
-        //Using method lightSwitcherCurrentPower called from class lightSwitcher, adding data to println function
-        System.out.println("Current Power is - " + lightSwitcher.lightSwitcherCurrentPower() + " Watt");
+        //Using static method lightSwitcherCurrentPower called from class lightSwitcher, adding data to println function
+        System.out.println("Electric Current Power is - " + lightSwitcher.lightSwitcherCurrentPower() + " Watt");
+        //Using static method addressShow called from class lightSwitcher, to show the address
+        lightSwitcher.addressShow();
     }
 
 }
